@@ -26,7 +26,7 @@ We should typically make changes when any of the following criteria are met:
  - Use GitHub for all methology designs, use cases, and so on.
  - At any given time, there would be _at most_ 2 work branches. The branches would exist if work has started on them. 
    - `master` - Current stable version. No PRs would be accepted directly to modify the methodology. PRs against supporting files can be accepted.
-   - `development` - The next PATCH version of the specification. All changes to master will go through this version.  
+   - `development` - The next PATCH version of the methodology. All changes to master will go through this version.  
  - The `master` branch shall remain the current, released APIOsp Cycles methodology.  
  - Examples of how something is described _currently_ vs. the proposed solution should accompany any change proposal.
  - New features should be done in feature branches/forks which, upon approval, are merged into the development branch.
