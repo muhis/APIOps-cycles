@@ -27,7 +27,7 @@ We should typically make changes when any of the following criteria are met:
  - At any given time, there would be _at most_ 2 work branches. The branches would exist if work has started on them. 
    - `master` - Current stable version. No PRs would be accepted directly to modify the methodology. PRs against supporting files can be accepted.
    - `development` - The next PATCH version of the methodology. All changes to master will go through this version.  
- - The `master` branch shall remain the current, released APIOsp Cycles methodology.  
+ - The `master` branch shall remain the current, released APIOps Cycles methodology.  
  - Examples of how something is described _currently_ vs. the proposed solution should accompany any change proposal.
  - New features should be done in feature branches/forks which, upon approval, are merged into the development branch.
  - Use labels for the workflow of specification changes.  Examples of labels are `proposed`, `needs migration review`, `needs tooling review`, `needs documentation`, `rejected`, and `needs approval`.  These labels must be assigned by project committers.
