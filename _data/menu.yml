@@ -1,0 +1,39 @@
+toc:
+  - title: Getting started
+    subfolderitems:
+      - page: Introduction
+        url: /
+      - page: What is APIOps®?
+        url: /whatisapiops/
+  - title: The process and method
+    subfolderitems:
+      - page: 1. API Canvas
+        url: /apicanvas/
+      - page: 2. Minimum Viable API Architecture (MVAA)
+        url: /minimumviableapiarchitecturemvaa/
+      - page: 3. Build APIs
+        url: /buildapis/
+      - page: 4. API Audit
+        url: /apiaudit/
+      - page: 5. Developer Experience
+        url: /developerapiconsumerprogram/
+      - page: 6. Measuring APIs
+        url: /measuringapis/
+      - page: 7. Learn
+        url: /learn/
+  - title: Resource material
+    subfolderitems:
+      - page: API Business models
+        url: /APIBusinessModels
+      - page: Collecting architecture requirements
+        url: /minimumviableapiarchitecturemvaa/collectingarchitecturerequirements/
+      - page: API Audit form
+        url: /apiaudit/apiauditform/
+      - page: API design style guide
+        url: /buildapis/apidesignstyleguide/
+      - page: Terms and conditions template
+        url: /APIAndDeveloperPortalTermsAndConditions/
+      - page: API management key concepts
+        url: /APIManagementKeyConcepts
+      - page: API Canvas fill in instructions
+        url: /apicanvas/apicanvasinstructions

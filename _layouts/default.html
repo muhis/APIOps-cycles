@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+{% seo %}
+    <meta name="description" content="{{ page.description | default: site.description | default: site.github.project_tagline }}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="theme-color" content="#0092dc">
+
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link href="{{ '/assets/css/materialdesignicons.min.css?v=' | append: site.github.build_revision | relative_url }}" media="all" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.red-indigo.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  </head>
+  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+            <!-- The drawer is always open in large screens. The header is always shown,
+  even in small screens. -->
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+          <header class="mdl-layout__header">
+          </header>
+          <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">{{ site.title | default: site.github.repository_name }}</span>
+            <nav class="mdl-navigation">
+                 {% for item in site.data.menu.toc %}
+                  <b>{{ item.title }}</b>
+                  {% for entry in item.subfolderitems %}
+                   <a href="{{ site.baseurl}}{{ entry.url }}" class="mdl-navigation__link">{{ entry.page }}</a>
+                  {% endfor %}
+               {% endfor %}
+            </nav>
+          </div>
+          <main class="mdl-layout__content">
+            <div class="page-content">
+              {{ content }}
+            </div>
+
+          <footer class="docs-footer mdl-mini-footer mdl-color--grey-900">
+            <ul class="mdl-mini-footer--social-btn">
+              <li class="mdl-mini-footer--social-btn">
+                <a href="https://twitter.com/apiops" class="social-btn mdi mdi-twitter-box mdl-light mdi-24px" role="button" title="Twitter"></a>
+              </li>
+              <li class="mdl-mini-footer--social-btn">
+                <a href="https://www.facebook.com/groups/apiops/" class="social-btn mdi mdi-facebook-box mdi-light mdi-24px" role="button" title="Facebook"></a>
+              </li>
+              <li class="mdl-mini-footer--social-btn">
+                <a href="https://github.com/apiops/apiops-cycles" class="social-btn mdi mdi-github-box mdi-light mdi-24px" role="button" title="GitHub"></a>
+              </li>
+            </ul>
+            <ul class="docs-link-list">
+              <li><a class="mdl-color-text--grey-600" href="{{ site.baseurl}}/contributors/">License & Contributors</a></li>
+              <li><a class="mdl-color-text--grey-600" href="https://github.com/apiops/apiops-cycles/issues">Help & Issues</a></li>
+            </ul>
+          </footer>
+          </main>
+        </div>
+
+    {% if site.google_analytics %}
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', '{{ site.google_analytics }}', 'auto');
+        ga('send', 'pageview');
+      </script>
+    {% endif %}
+    
+  </body>
+</html>
