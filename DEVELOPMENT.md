@@ -13,11 +13,11 @@ but methodologies should be backed by realistic scenarios.
 
 We should typically make changes when any of the following criteria are met:
 
- - Clarity.  The current "way" something is done doesn't make sense, is complicated, or not clear.
- - Consistency.  A portion of the methodology is not consistent with the rest
- - Necessary functionality.  We are missing functionality because of a certain design of the methodology.
- - Forward-looking designs.  As usage and business models of APIs evolves we should always consider what the next important aspect to consider and cover should be.
- - Impact.  A change will provide impact on a large number of use cases.  We should not be forced to accommodate every use case.  We should strive to make the _common_ and _important_ use 
+ - **Clarity**.  The current "way" something is done doesn't make sense, is complicated, or not clear.
+ - **Consistency**.  A portion of the methodology is not consistent with the rest
+ - **Necessary functionality**.  We are missing functionality because of a certain design of the methodology.
+ - **Forward-looking designs**.  As usage and business models of APIs evolves we should always consider what the next important aspect to consider and cover should be.
+ - **Impact**.  A change will provide impact on a large number of use cases.  We should not be forced to accommodate every use case.  We should strive to make the _common_ and _important_ use 
  cases.  We cannot be edge-case driven.
 
 
