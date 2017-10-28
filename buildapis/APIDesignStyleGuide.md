@@ -42,6 +42,22 @@ Private or confidendial data should not be passed in URI, Query or header parame
 
 Each API consumer needs to know which version of the API they are using and to be able to subscribe and use the version they need.
 
+When APIs are upgraded with a breaking change, it may lead to breaking existing products or services using upgraded APIs.
+
+Examples of breaking changes:
+
+* renaming fields or resource paths or endpoints
+* changing field type \(e.g. from string to a list of strings\)
+* changing structure of payload \(removing/renaming/retyping fields\)
+* altering HTTP verbs
+* changing response HTTP codes 
+
+In case of breaking changes making a new version of the updated API is mandatory.
+
+There are mixed opinions around about the way the versioning is indicated: whether API version should be included in the URL or in a header.
+
+**Common convention is to have the version in the URL of APIs**. The reason is to ensure browser explorability of the resources across versions.
+
 In some API management systems, the version does not need to be in the URI nor in the header because each API product has it's own version and each API consuming client application is only able to use 1 version of the API at a time. If same client would use multiple versions of the same API at a time, they need to do different subscriptions. This versioning strategy works with all clients and is suited for caching and HATEOAS.
 
 Versioning in - [Azure API Management](https://docs.microsoft.com/en-us/azure/api-management/api-management-faq#how-do-i-use-api-versioning-in-api-management)
@@ -56,7 +72,9 @@ The URI should include `/vN` with the major version (`N`) as a prefix. Having 
 
 ##### Example
 
-    /v1/
+`https://apinf.io/rest/v1/apis`
+
+If there is any major breaking update, the new set of APIs is named as `v2` .
 
 ### Namespaces
 
