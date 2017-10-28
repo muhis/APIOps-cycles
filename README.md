@@ -25,6 +25,8 @@ We welcome all new contributions which help us to iterate APIOps Cycles model fu
 
 ## How do you contribute
 
+Read first our [Development guidelines](https://github.com/APIOps/APIOps-cycles/blob/master/DEVELOPMENT.md).
+
 There are multiple ways to contribute, but here's a few: 
 
 * Tweet about the APIOps&reg; Cycles model. Follow [@APIOps](https://twitter.com/apiops) handle to get latest news. 
@@ -63,7 +65,7 @@ A few more things:
 
 The site is built with [Jekyll](https://jekyllrb.com/) from the content in Markdown files. Every commit to master -branch triggers update automatically to github built-in jekyll static site generator and after successfull commit in about 1-5 minutes the site is built. 
 
-You can use the [editor on GitHub](https://github.com/mniinio/APIOps-cycles/edit/master/README.md) to maintain and preview the content for your website in Markdown files
+You can use the [editor on GitHub](https://github.com/APIOps/APIOps-cycles/edit/master/README.md) to maintain and preview the content for your website in Markdown files
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
