@@ -10,6 +10,15 @@ APIOps is a quite commonly used term. API -specific things are design patterns, 
 
 APIOps goal is to design, build, test and release APIs more rapidly, frequently and reliably.
 
+## Community
+
+Community has several visible communication methods. 
+
+* Follow [@APIOps®](https://twitter.com/apiops) handle to get latest news.
+* [APIOps® blog](http://apiops.net) contains more detailed stories
+* [APIOps® local groups](https://medium.com/apiops/apiops-global-network-local-communities-6e72becd2b6b), which organize meetups can be found from apiops.net
+* [APIOps® Facebook group](https://www.facebook.com/groups/apiops/)
+
 APIs have special specification standards, most common is OpenAPI (swagger). APIs have also some special tools for building deploying, testing and generating documentation. It is the same as end-user applications, with UX and UI design tools and special automation tools.
 
 APIOps, like DevOps, has roots in Lean management.
