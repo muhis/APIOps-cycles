@@ -9,7 +9,7 @@ The APIOps&reg; Cycles is a set of tools and methods for designing **API Managem
 
 APIOps&reg; method uses modern and proven frameworks with a twist of our experience to the them for APIs. All methods have a Lean management base: [DevOps (wikipedia)](https://en.wikipedia.org/wiki/DevOps), [Business Model Canvas (wikipedia)](https://en.wikipedia.org/wiki/Business_Model_Canvas), [Value Proposition Canvas](), [Lean Startup (wikipedia)](https://en.wikipedia.org/wiki/Lean_startup), [Minimum Viable Architecture](https://www.enterpriseirregulars.com/116163/minimum-viable-architecture-good-enough-good-enough-enterprise/) and [API Model Canvas](https://www.slideshare.net/3scale/api-model-canvas-apidays-mediterranea-2015). Afore mentioned frameworks, tools and methods have been re-interpreted to create the APIOps&reg; Cycles. 
 
-APIOps&reg; Cycles is created in collaboration with open non-profit [APIOps.net Community](https://medium.com/apiops) and [Digia Plc](www.digia.com). APIOps&reg; is a registered trademark of [APInf Oy](http://apinf.com). Templates and method is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/)
+APIOps&reg; Cycles is created in collaboration with open non-profit [APIOps.net Community](https://medium.com/apiops) and [Digia Plc](http://www.digia.com). APIOps&reg; is a registered trademark of [APInf Oy](http://apinf.com). Templates and method is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 [**APIOPs&reg; community**](http://apiops.net) is open for all and used as framework to promote and develop APIOps&reg; Cycles.  
 
@@ -24,7 +24,7 @@ All methods used are **technology agnostic**. Used technology to create, manage,
 **APIOps&reg; goal is to design, build, test and release APIs more rapidly, frequently and reliably. In short, to build standardized API value chain automation**
 
 ### Digia Plc.
-[Digia Plc](www.digia.com) is using APIOps&reg; Cycles in their own customer projects. The purpose of the guidelines is to define standards in API Driven development and to continuosly develop the methods and best practices.
+[Digia Plc](http://www.digia.com) is using APIOps&reg; Cycles in their own customer projects. The purpose of the guidelines is to define standards in API Driven development and to continuosly develop the methods and best practices.
 
 ### APInf Oy
-[APInf Oy](apinf.com) contributes to APIOps&reg; Cycles and promotes it to all customers. Although APIOps&reg; trademark is registered trademark of APInf Oy, [it stays with community, contributors and members are encouraged to address it](https://medium.com/apinf/apinf-with-apiops-799dc5102e41). APIOps&reg; trademark brings an unique identity to the community. APInf Oy commits to stay as active contributor and partner of APIOps&reg;.
+[APInf Oy](http://apinf.com) contributes to APIOps&reg; Cycles and promotes it to all customers. Although APIOps&reg; trademark is registered trademark of APInf Oy, [it stays with community, contributors and members are encouraged to address it](https://medium.com/apinf/apinf-with-apiops-799dc5102e41). APIOps&reg; trademark brings an unique identity to the community. APInf Oy commits to stay as active contributor and partner of APIOps&reg;.
