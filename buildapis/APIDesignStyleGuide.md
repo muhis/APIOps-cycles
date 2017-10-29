@@ -219,7 +219,7 @@ Do not implement for collections if not absolutely sure to avoid accidental remo
 
 </table>
 
-# Use HTTP methods in details \(verbs\)
+## Use HTTP methods in details \(verbs\)
 
 All used methods and their parameters must be described in generated documentation endpoint by endpoint.
 
