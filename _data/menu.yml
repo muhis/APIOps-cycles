@@ -29,7 +29,7 @@ toc:
         url: /minimumviableapiarchitecturemvaa/collectingarchitecturerequirements/
       - page: API Audit form
         url: /apiaudit/apiauditform/
-      - page: API design style guide
+      - page: REST API Design Guide
         url: /buildapis/apidesignstyleguide/
       - page: Terms and conditions template
         url: /APIAndDeveloperPortalTermsAndConditions/
