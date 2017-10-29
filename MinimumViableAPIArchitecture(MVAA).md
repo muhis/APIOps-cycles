@@ -20,5 +20,5 @@ Each Phase of MVAA goes thru the entire APIOps&reg; Cycle. Development from here
 
 ## Before you enter any of the actual MVAA design phases
 
-*   Make sure the [API Canvas](../apicanvas) has been created using the [APIOps&reg; Cycles templates](apiopscycles)
-*   Collect [architecture requirements](collectingarchitecturerequirements) using the [APIOps&reg; Cycles templates](apiopscycles)
+*   Make sure the [API Canvas](../apicanvas) has been created
+*   Collect [architecture requirements](collectingarchitecturerequirements)
