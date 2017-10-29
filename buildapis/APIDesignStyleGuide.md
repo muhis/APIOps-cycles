@@ -1,5 +1,5 @@
 ---
-title: API Design Style Guide
+title: REST API Design Guide
 permalink: /buildapis/apidesignstyleguide/
 parenturl: /apidesignstyleguide/
 ---
@@ -40,7 +40,17 @@ Private or confidendial data should not be passed in URI, Query or header parame
 
 ### Version
 
-Each API consumer needs to know which version of the API they are using and to be able to subscribe and use the version they need.
+Each API consumer needs to know which version of the API they are using and to be able to subscribe and use the version they need.There are mixed opinions around about the way the versioning is indicated: whether API version should be included in the URL or in a header.
+
+**Common convention is to have the version in the URL of APIs**. The reason is to ensure browser explorability of the resources across versions.
+
+In some API management systems, the version does not need to be in the URI nor in the header because each API product has it's own version and each API consuming client application is only able to use 1 version of the API at a time. If same client would use multiple versions of the same API at a time, they need to do different subscriptions. This versioning strategy works with all clients and is suited for caching and HATEOAS.
+
+Versioning in - [Azure API Management](https://docs.microsoft.com/en-us/azure/api-management/api-management-faq#how-do-i-use-api-versioning-in-api-management)
+
+**When version number is used it should always be in the URI**, since not all clients (for example marketing tools) can set headers and using version number as a query parameter might cause slowness as query parameters are not cached. Also most API management platforms require that the URIs are unique if multiple versions of the same API are deployed at the same time.
+
+The URI should include `/vN` with the major version (`N`) as a prefix. Having the letter v in front of the number is important to separate the version number from a resource identifier.
 
 When APIs are upgraded with a breaking change, it may lead to breaking existing products or services using upgraded APIs.
 
@@ -54,17 +64,6 @@ When APIs are upgraded with a breaking change, it may lead to breaking existing 
 
 In case of breaking changes making a new version of the updated API is mandatory.
 
-There are mixed opinions around about the way the versioning is indicated: whether API version should be included in the URL or in a header.
-
-**Common convention is to have the version in the URL of APIs**. The reason is to ensure browser explorability of the resources across versions.
-
-In some API management systems, the version does not need to be in the URI nor in the header because each API product has it's own version and each API consuming client application is only able to use 1 version of the API at a time. If same client would use multiple versions of the same API at a time, they need to do different subscriptions. This versioning strategy works with all clients and is suited for caching and HATEOAS.
-
-Versioning in - [Azure API Management](https://docs.microsoft.com/en-us/azure/api-management/api-management-faq#how-do-i-use-api-versioning-in-api-management)
-
-**When version number is used it should always be in the URI**, since not all clients (for example marketing tools) can set headers and using version number as a query parameter might cause slowness as query parameters are not cached. Also most API management platforms require that the URIs are unique if multiple versions of the same API are deployed at the same time.
-
-The URI should include `/vN` with the major version (`N`) as a prefix. Having the letter v in front of the number is important to separate the version number from a resource identifier.
 
 #### URI Template
 
@@ -74,7 +73,7 @@ The URI should include `/vN` with the major version (`N`) as a prefix. Having 
 
 `https://apinf.io/rest/v1/apis`
 
-If there is any major breaking update, the new set of APIs is named as `v2` .
+If there is any major breaking update, the new set of APIs is named as `vx` .
 
 ### Namespaces
 
@@ -199,7 +198,10 @@ Do not implement for collections if not absolutely sure to avoid accidental remo
 
 </table>
 
-# Use HTTP methods \(verbs\)
+# Use HTTP methods in details \(verbs\)
+
+All used methods and their parameters must be described in generated documentation endpoint by endpoint.
+
 
 ### GET \(read\)
 
@@ -254,9 +256,46 @@ DELETE method requests that the resource, or its instance, should be removed fro
     * In a successful case a response with 204 is returned \(no payload included\).
     * In an unsuccessful case a response with 4xx is returned.
 
-## Documentation of used HTTP methods
+### Error handling
 
-All used methods and their parameters must be described in generated documentation endpoint by endpoint.
+Just like an HTML error page shows a useful error message to a visitor, an API should provide a useful error message in a known consumable format. The representation of an error should be no different than the representation of any resource, just with its own set of fields.
+
+The API should always return sensible HTTP status codes. API errors typically break down into 2 types: 400 series status codes for client issues & 500 series status codes for server issues. At a minimum, the API should standardize that all 400 series errors come with consumable JSON error representation. If possible \(i.e. if load balancers & reverse proxies can create custom error bodies\), this should extend to 500 series status codes.
+
+A JSON error body should provide a few things for the developer - a useful error message, a unique error code \(that can be looked up for more details in the docs\) and possibly a detailed description. JSON output representation for something like this would look like:
+
+```
+
+{
+  "code" : 1234,
+  "title" : "Organization is not found",
+  "detail" : "Organization with specified ID is not found"
+}
+
+```
+
+Validation errors for PUT, PATCH and POST requests will need a field breakdown. This is best modeled by using a fixed top-level error code for validation failures and providing the detailed errors in an additional errors field, like so:
+
+```
+
+{
+  "code" : 1024,
+  "title" : "Validation Failed",
+  "detail" : [
+    {
+      "code" : 5432,
+      "title" : "first_name",
+      "detail" : "First name cannot have fancy characters"
+    },
+    {
+       "code" : 5622,
+       "title" : "password",
+       "detail" : "Password cannot be blank"}
+  ]
+}
+
+```
+
 
 ### Collection Resource
 
@@ -296,12 +335,6 @@ Links should be provided with rels of `next`, `previous`, `first`, `last` w
 
     GET /hardware/v1/products
 
-#### HTTP Status
-
-*   200 OK and items -array as empty array
-*   204 Collection is empty, nothing in the body, but request is successful.
-*   404 Wrong url
-*   400 Bad request from the client, for example a required query parameter was missing
 
 ### Read Single Resource
 
@@ -317,8 +350,5 @@ All identifiers for sensitive data should be non-sequential, and preferably non-
 
     GET /hardware/v1/products/6438313255314
 
-#### HTTP Status
 
-*   200 OK if data is found
-*   404 Not found if resource with provided identifier is not found (the same error code might mean also that client entered the URI otherwise incorrectly)
-*   400 Bad request if client provided identifier but it is of wrong data type, contains blacklisted characters or is length is not correct
+
