@@ -82,13 +82,13 @@ parenturl: /minimumviableapiarchitecturemvaa/
 <tr>
   <th colspan="1">API Audit</th>
   <td markdown="1">
-  Validate the prototype with [API Audit](../apiaudit).
+  Validate the prototype with [API Audit](/apiaudit).
   </td>
   <td markdown="1">
-  Validate the prototype with [API Audit](../apiaudit).
+  Validate the prototype with [API Audit](/apiaudit).
   </td>
   <td markdown="1">
-  Validate the prototype with [API Audit](../apiaudit).
+  Validate the prototype with [API Audit](/apiaudit).
   </td>
 </tr>
 <tr>
@@ -133,7 +133,8 @@ parenturl: /minimumviableapiarchitecturemvaa/
   <td markdown="1">
   1.  Keep an eye on response times, amount of errors (also client side 4xx) due to any problems with scaling.
   2.  Add Search Engine Optimization (SEO) capabilities to developer portal to see who visits and how many start using the APIs.
-  3.  Track API usage per API consumer segment according to your metrics: requests, revenue, feedback, incidents...
+  3.  Track API usage per API consumer segment according to your metrics: requests, revenue, feedback, incidents
+    .
   </td>
 </tr>
 <tr>
