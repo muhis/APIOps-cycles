@@ -4,6 +4,27 @@ permalink: /buildapis/apidesignstyleguide/
 parenturl: /apidesignstyleguide/
 ---
 
+## General guidelines
+
+Our goal is consistency, maintainability, and best practices across applications. APIOps aim to balance a truly RESTful API interface with a positive developer experience \(DX\).
+
+In a nutshell:
+
+* Keep APIs' functionalities as simple as possible. The endpoints do only one thing, but they do it well.
+* Avoid overlapping functionalities between different APIs.
+* In error case include in the API response verbose description. 
+  * include also a description about erroneous parameter value, if it is feasible.
+* Implement in each API \(or bundle of APIs\) ability to generate of its own machine readable document about it's functionality.
+* API must have support for the OPTIONS endpoint, which is needed for example in preflight request in SwaggerUI
+
+Minimum developer experience
+
+* Each API must have descriptive title
+* The description of API must be sufficient.
+* Each API must have documentation, either a swagger file or open API specification.
+* Each API must have own logo
+* Each API should have getting started section to provide low learning curve and fast 1st positive experience for the consumer 
+
 ## Format of API specification
 
 Use the most recent [OpenAPI](https://www.openapis.org/) version supported by the API management platform for describing your API. [OpenAPI Specification (wikipedia)](https://en.wikipedia.org/wiki/OpenAPI_Specification) originally known as the Swagger Specification, is a specification for machine-readable interface files for describing, producing, consuming, and visualizing RESTful Web services.
