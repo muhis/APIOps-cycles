@@ -388,4 +388,10 @@ Any "No" answers must have an explanation in the comment field. Those implement
 <td colspan="1">Message integrity has been implemented according to the evaluated need?</td>
 <td colspan="1">yes</td>
 <td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td></tr>
+<tr>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">UUID used to identify object instead of internal ID?</td>
+<td colspan="1">yes</td>
+<td colspan="1">&nbsp;</td>
 <td colspan="1">&nbsp;</td></tr></tbody></table>
